@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Pranav Gore</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .timeline-bar {
+      height: 2px; /* Reduced height of the bar */
+      width: 0; /* Start width from 0 */
+      transition: width 3s ease-in-out; /* Animate width */
+      background-color: #14b8a6; /* Teal color for the bar */
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%);
+    }
+
+    .edu-card {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-in-out;
+    }
+
+    .edu-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .edu-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .edu-text {
+      flex: 1;
+      text-align: left;
+      opacity: 0; /* Initially hidden */
+      transform: translateX(-30px); /* Start from the left */
+      transition: opacity 1s ease, transform 1s ease; /* Transition for the animation */
+    }
+
+    .edu-timeline {
+      flex: 2;
+      position: relative;
+      padding-left: 2rem;
+      width: 100%;
+    }
+
+    .edu-card-first {
+      margin-top: 20px; /* Add margin-top to the first card to create a gap */
+    }
+
+    /* Tailwind Animations */
+    .edu-card-animation {
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .edu-card-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .edu-card-hidden {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .edu-text-visible {
+      opacity: 1;
+      transform: translateX(0); /* Move text to the normal position */
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 py-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <a href="index.html" class="text-2xl font-bold text-white">Pranav Gore</a>
+      <ul class="flex gap-6 text-sm sm:text-base">
+        <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-teal-400">About</a></li>
+        <li><a href="skills.html" class="hover:text-teal-400">Skills</a></li>
+        <li><a href="projects.html" class="hover:text-teal-400">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+        <li><a href="achievements.html" class="hover:text-teal-400">Achievements</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="px-4 sm:px-8 py-20 max-w-6xl mx-auto">
+    <!-- Container for text and timeline -->
+    <div class="edu-container">
+      <!-- Text on the left with animation -->
+      <div class="edu-text">
+        <h2 class="text-3xl font-semibold text-teal-400 mb-4">Education</h2>
+        <p class="text-lg text-gray-400">
+          Here’s my educational journey that has helped shape who I am today. 
+          I started with my schooling at Global English Medium School, 
+          moved to Sadguru Gadge Maharaj College for my higher secondary, 
+          and am now pursuing my B.Tech at the Government College of Engineering, Karad.
+        </p>
+      </div>
+
+      <!-- Timeline on the right -->
+      <div class="edu-timeline">
+        <div class="absolute left-1/2 top-0 transform -translate-x-1/2 w-1 bg-teal-400 timeline-bar" id="timeline-bar"></div>
+
+        <!-- 10th -->
+        <div class="flex justify-between items-center w-full mb-8 edu-card-first">
+          <div class="w-5/12 text-right pr-6">
+            <div class="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 edu-card edu-card-animation" id="edu1">
+              <h3 class="text-lg font-bold text-teal-400">10th Grade</h3>
+              <p class="text-sm text-gray-400">Global English Medium School, Umbraj</p>
+              <p class="text-sm text-gray-300 mt-2">Score: <strong>90.60%</strong> (2020)</p>
+            </div>
+          </div>
+          <div class="w-2 h-2 bg-teal-400 rounded-full z-10"></div>
+          <div class="w-5/12"></div>
+        </div>
+
+        <!-- 12th -->
+        <div class="flex justify-between items-center w-full mb-8 flex-row-reverse">
+          <div class="w-5/12 text-left pl-6">
+            <div class="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 edu-card edu-card-animation" id="edu2">
+              <h3 class="text-lg font-bold text-teal-400">12th Grade</h3>
+              <p class="text-sm text-gray-400">Sadguru Gadge Maharaj College, Karad</p>
+              <p class="text-sm text-gray-300 mt-2">Score: <strong>78%</strong></p>
+            </div>
+          </div>
+          <div class="w-2 h-2 bg-teal-400 rounded-full z-10"></div>
+          <div class="w-5/12"></div>
+        </div>
+
+        <!-- BTech -->
+        <div class="flex justify-between items-center w-full mb-8">
+          <div class="w-5/12 text-right pr-6">
+            <div class="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 edu-card edu-card-animation" id="edu3">
+              <h3 class="text-lg font-bold text-teal-400">B.Tech CSE</h3>
+              <p class="text-sm text-gray-400">Government College of Engineering, Karad</p>
+              <p class="text-sm text-gray-300 mt-2">CGPA: <strong>8.67</strong></p>
+            </div>
+          </div>
+          <div class="w-2 h-2 bg-teal-400 rounded-full z-10"></div>
+          <div class="w-5/12"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript for Animation -->
+  <script>
+    window.addEventListener('load', () => {
+      const bar = document.getElementById('timeline-bar');
+      const edu1 = document.getElementById('edu1');
+      const edu2 = document.getElementById('edu2');
+      const edu3 = document.getElementById('edu3');
+      const eduText = document.querySelector('.edu-text');
+
+      // Animate bar width
+      bar.style.width = '100%'; // Animate the bar's width to 100%
+
+      // Animate text on the left
+      setTimeout(() => eduText.classList.add('edu-text-visible'), 500);
+
+      // Show education cards at intervals
+      setTimeout(() => edu1.classList.add('edu-card-visible'), 1000);
+      setTimeout(() => edu2.classList.add('edu-card-visible'), 2000);
+      setTimeout(() => edu3.classList.add('edu-card-visible'), 3000);
+    });
+  </script>
+</body>
+</html>

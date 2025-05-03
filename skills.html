@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills - Pranav Gore</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap CSS for grid system -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .skill-card {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-in-out;
+    }
+
+    .skill-card-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .skill-card-container {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .progress-bar {
+      height: 8px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 py-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <a href="index.html" class="text-2xl font-bold text-white">Pranav Gore</a>
+      <ul class="flex gap-6 text-sm sm:text-base">
+        <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-teal-400">About</a></li>
+        <li><a href="skills.html" class="hover:text-teal-400">Skills</a></li>
+        <li><a href="projects.html" class="hover:text-teal-400">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+        <li><a href="achievements.html" class="hover:text-teal-400">Achievements</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Skills Section -->
+  <section class="px-4 sm:px-8 py-20 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold text-teal-400 text-center mb-8">Skills & Technologies</h2>
+    
+    <div class="skills-container">
+      <!-- Skill Card 1 -->
+      <div class="skill-card-container w-full sm:w-1/3 p-4 text-center skill-card" id="skill1">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-teal-400 mb-4">Programming Languages</h3>
+          <p class="text-sm text-gray-400 mb-6">Java, JavaScript, HTML, CSS</p>
+          <div class="progress">
+            <div class="progress-bar bg-teal-400" style="width: 90%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Card 2 -->
+      <div class="skill-card-container w-full sm:w-1/3 p-4 text-center skill-card" id="skill2">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-teal-400 mb-4">Web Development</h3>
+          <p class="text-sm text-gray-400 mb-6">React.js, Node.js, Express.js, MongoDB</p>
+          <div class="progress">
+            <div class="progress-bar bg-teal-400" style="width: 85%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Card 3 -->
+      <div class="skill-card-container w-full sm:w-1/3 p-4 text-center skill-card" id="skill3">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-teal-400 mb-4">Frontend Development</h3>
+          <p class="text-sm text-gray-400 mb-6">HTML5, CSS3, JavaScript (ES6+), React.js</p>
+          <div class="progress">
+            <div class="progress-bar bg-teal-400" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Card 4 -->
+      <div class="skill-card-container w-full sm:w-1/3 p-4 text-center skill-card" id="skill4">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-teal-400 mb-4">Backend Development</h3>
+          <p class="text-sm text-gray-400 mb-6">Node.js, Express.js, MongoDB</p>
+          <div class="progress">
+            <div class="progress-bar bg-teal-400" style="width: 75%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Card 5 -->
+      <div class="skill-card-container w-full sm:w-1/3 p-4 text-center skill-card" id="skill5">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-teal-400 mb-4">Version Control</h3>
+          <p class="text-sm text-gray-400 mb-6">Git, GitHub</p>
+          <div class="progress">
+            <div class="progress-bar bg-teal-400" style="width: 70%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Card 6 -->
+      <div class="skill-card-container w-full sm:w-1/3 p-4 text-center skill-card" id="skill6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-teal-400 mb-4">Data Structures & Algorithms</h3>
+          <p class="text-sm text-gray-400 mb-6">Strong foundation in DSA using Java</p>
+          <div class="progress">
+            <div class="progress-bar bg-teal-400" style="width: 65%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript for Animation -->
+  <script>
+    window.addEventListener('load', () => {
+      const skill1 = document.getElementById('skill1');
+      const skill2 = document.getElementById('skill2');
+      const skill3 = document.getElementById('skill3');
+      const skill4 = document.getElementById('skill4');
+      const skill5 = document.getElementById('skill5');
+      const skill6 = document.getElementById('skill6');
+
+      // Add classes to make the skill cards visible
+      setTimeout(() => skill1.classList.add('skill-card-visible'), 500);
+      setTimeout(() => skill2.classList.add('skill-card-visible'), 1000);
+      setTimeout(() => skill3.classList.add('skill-card-visible'), 1500);
+      setTimeout(() => skill4.classList.add('skill-card-visible'), 2000);
+      setTimeout(() => skill5.classList.add('skill-card-visible'), 2500);
+      setTimeout(() => skill6.classList.add('skill-card-visible'), 3000);
+    });
+  </script>
+
+</body>
+</html>
