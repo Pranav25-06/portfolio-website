@@ -12,45 +12,58 @@
 
 <body class="bg-gray-900 text-white font-[Roboto]">
 
-  <!-- Navbar -->
-  <nav class="bg-gray-800 py-4 shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center px-6">
-      <a href="index.html" class="text-2xl font-bold text-white">Pranav Gore</a>
-      <ul class="flex gap-6 text-sm sm:text-base">
-        <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-teal-400">About</a></li>
-        <li><a href="skills.html" class="hover:text-teal-400">Skills</a></li>
-        <li><a href="projects.html" class="hover:text-teal-400">Projects</a></li>
-        <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
-        <li><a href="achievements.html" class="hover:text-teal-400">Achievements</a></li>
-      </ul>
-    </div>
-  </nav>
+<!-- Navbar -->
+<nav class="bg-gray-800 py-2 shadow-md sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center px-6">
+    <a href="index.html" class="text-2xl font-bold text-white">Pranav Gore</a>
 
- <!-- Hero Section -->
-<section class="bg-cover bg-center h-screen relative flex items-center justify-center" style="background-image: url('https://via.placeholder.com/1500x800');">
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-  <div class="container mx-auto px-6 py-12 relative z-10 flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 lg:space-x-10">
-    
-    <!-- Image Section -->
-    <div class="w-full lg:w-1/3">
-      <img src="https://t4.ftcdn.net/jpg/09/17/26/25/360_F_917262500_vkLHa3NChVnaXgoKThxDyYsF0Pa45dwy.jpg" alt="Pranav Gore" class="rounded-full mx-auto shadow-lg w-64 h-64 object-cover border-4 border-teal-400">
-    </div>
+    <!-- Hamburger Icon (mobile) -->
+    <button id="nav-toggle" class="text-white text-2xl sm:hidden focus:outline-none">
+      ☰
+    </button>
 
-    <!-- Text + Summary Section -->
-    <div class="w-full lg:w-2/3 text-center lg:text-left">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-white">Hello, I'm Pranav Gore</h1>
-      <p class="text-xl text-gray-200 mb-4">A passionate MERN Stack Web Developer</p>
-      <p class="text-base lg:text-lg text-gray-300 leading-relaxed animate__animated animate__fadeInUp">
-        Highly motivated and detail-oriented <strong>B.Tech Information Technology</strong> student (3rd Year) with hands-on experience in full-stack web development using the <strong>MERN stack</strong> and strong problem-solving skills through <strong>Data Structures and Algorithms in Java</strong>. 
-        Adept at building scalable web applications, collaborating via <strong>GitHub</strong>, and continuously learning new technologies. 
-        Seeking an opportunity to apply technical and analytical skills in a dynamic software development environment.
-      </p>
-    </div>
+    <!-- Navigation Links -->
+    <ul id="nav-menu" class="hidden sm:flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mt-4 sm:mt-0">
+      <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
+      <li><a href="about.html" class="hover:text-teal-400">About</a></li>
+      <li><a href="skills.html" class="hover:text-teal-400">Skills</a></li>
+      <li><a href="projects.html" class="hover:text-teal-400">Projects</a></li>
+      <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+      <li><a href="achievements.html" class="hover:text-teal-400">Achievements</a></li>
+    </ul>
   </div>
-</section>
+</nav>
 
 
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-screen relative flex items-center justify-center" style="background-image: url('https://via.placeholder.com/1500x800');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto px-6 py-12 relative z-10 flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 lg:space-x-10">
+      
+      <!-- Image Section -->
+      <div class="w-full lg:w-1/3">
+        <img src="https://t4.ftcdn.net/jpg/09/17/26/25/360_F_917262500_vkLHa3NChVnaXgoKThxDyYsF0Pa45dwy.jpg" alt="Pranav Gore" class="rounded-full mx-auto shadow-lg w-64 h-64 object-cover border-4 border-teal-400">
+      </div>
+
+      <!-- Text + Summary Section -->
+      <div class="w-full lg:w-2/3 text-center lg:text-left">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-white">Hello, I'm Pranav Gore</h1>
+        <p class="text-xl text-gray-200 mb-4">A passionate MERN Stack Web Developer</p>
+        <p class="text-base lg:text-lg text-gray-300 leading-relaxed animate__animated animate__fadeInUp">
+          Highly motivated and detail-oriented <strong>B.Tech Information Technology</strong> student (3rd Year) with hands-on experience in full-stack web development using the <strong>MERN stack</strong> and strong problem-solving skills through <strong>Data Structures and Algorithms in Java</strong>. 
+          Adept at building scalable web applications, collaborating via <strong>GitHub</strong>, and continuously learning new technologies. 
+          Seeking an opportunity to apply technical and analytical skills in a dynamic software development environment.
+        </p>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  
 </body>
 
 </html>
